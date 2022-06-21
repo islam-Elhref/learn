@@ -1,0 +1,149 @@
+/*
+
+position
+parent for slide grid
+
+*/
+
+.parent {
+    display: grid;
+    grid-template-columns: auto 2fr;
+    font-family: arial;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+.parent .slide {
+    display: inline-block;
+    order: -1;
+    border-right: 5px dotted red;
+    width: 100%;
+    text-align: center;
+}
+
+.parent .slide img {
+    width: 400px;
+    margin: 20px auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+/*----------------------------------*/
+
+/* Start *****************  one  ********************/
+
+.one .grid{
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: 50px auto;
+    gap:  15px;
+    color: white;
+}
+
+.one .grid div{
+    counter-increment: grid-div ;
+    background-color: #607d8b;
+}
+.one .grid div:before{
+    content: 'Element ' counter(grid-div);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* End *****************  ${one}  ********************/
+
+/* Start *****************  two  ********************/
+
+.layout{
+    width: 100%;
+    height: 500px;
+    display: grid;
+    color: white;
+    grid-template-columns: repeat(12 , 1fr);
+    grid-auto-rows: 50px 1fr 50px;
+    grid-template-areas:
+            'header header header header header header header header header header header header'
+            'section section section section section section section section section aside aside aside'
+            'footer footer footer footer footer footer footer footer footer footer footer footer'
+    ;
+}
+
+.layout > * {
+    display: flex;
+    justify-content: start;
+    padding: 10px;
+}
+
+.layout header{
+    background-color: #03a9f4 ;
+    grid-area: header;
+}
+.layout header:before{
+    content: 'header';
+}
+
+.layout section{
+    background-color:#ff5722 ;
+    grid-area: section;
+}
+.layout section:before{
+    content: 'section';
+}
+
+
+.layout aside{
+    background-color: #607d8b;
+    grid-area: aside;
+}
+
+.layout aside:before{
+    content: 'aside';
+}
+
+.layout footer{
+    background-color:#009688 ;
+    grid-area: footer;
+}
+.layout footer:before{
+    content: 'footer';
+}
+
+/* End *****************  ${two}  ********************/
+
+/* Start *****************  three  ********************/
+
+.three .grid {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin: 10px auto;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: auto 1fr 1fr auto;
+    grid-template-rows: 1fr auto;
+}
+.three .grid div{
+    background-color: #403f3f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* End *****************  ${three}  ********************/
