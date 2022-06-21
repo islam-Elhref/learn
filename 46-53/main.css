@@ -1,0 +1,250 @@
+/*
+
+position
+parent for slide grid
+
+*/
+
+.parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+    justify-items: center;
+    font-family: arial;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.parent > div:first-child {
+    width: 95%;
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.parent .slide {
+    display: inline-block;
+    order: -1;
+    border-right: 5px dotted red;
+    width: 100%;
+    text-align: center;
+}
+
+.parent .slide img {
+    width: 400px;
+    margin: 20px auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+/*----------------------------------*/
+/* Start *****************  test five  ********************/
+.assign-one {
+    width: 600px; /*true*/
+    height: 300px; /*true*/
+    background: #eee; /*true*/
+    margin: 10px auto; /*true*/
+    padding: 10px; /*true*/
+    display: flex; /*true*/
+    justify-content: space-between; /*true*/
+    color: white; /*true*/
+}
+
+.assign-one div {
+    flex-basis: 18%; /*true*/
+    height: 50%; /*true*/
+    display: flex; /*true*/
+    justify-content: center; /*true*/
+    align-items: center; /*true*/
+}
+
+.assign-one .one {
+    order: 2;
+    background: #ff9800;
+}
+
+.assign-one .two {
+    order: 3;
+    background: #8bc34a;
+    align-self: end;
+}
+
+.assign-one .three {
+    order: 4;
+    background: #795548;
+}
+
+.assign-one .four {
+    order: 1;
+    background: #673ab7;
+    align-self: end;
+}
+
+/* End *****************  ${test five}  ********************/
+
+/* Start *****************  assign six  ********************/
+:root {
+    --space: 10px;
+    --header: 10%;
+    --footer: 10%;
+    --padding: 10px;
+    --logo-size: 10%;
+    --sidebar-size: 30%;
+}
+
+.parent .page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    background: #eeeeee;
+    font-size: 16px;
+
+}
+
+/*header*/
+.parent .page .header {
+    height: var(--header);
+    display: flex;
+    justify-content: space-between;
+}
+
+.parent .page .header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: #ddd;
+    padding: 10px;
+    flex-basis: 10%;
+}
+
+.parent .page .header .links {
+    background: #ddd;
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    flex-basis: calc(100% - var(--logo-size) - var(--space));
+
+}
+
+.parent .page .header .links li {
+    margin: 0 2px;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s 0s ease-in-out;
+}
+
+.parent .page .header .links li:hover {
+    background: rgb(167, 167, 167);
+}
+
+/*header*/
+
+/*main-area*/
+
+.parent .page .main-area {
+    margin: var(--space) auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.parent .page .main-area .content {
+    background: #ddd;
+    flex-basis: calc(100% - var(--sidebar-size) - var(--space));
+    padding: 10px;
+}
+
+.parent .page .main-area .sidebar {
+    background: #ddd;
+    flex-basis: 30%;
+    padding: 10px
+}
+
+/*main-area*/
+
+.parent .page .footer {
+    align-items: center;
+    background-color: #ddd;
+    height: var(--footer);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+/* End *****************  ${assign six}  ********************/
+
+/* Start *****************  test  ********************/
+
+.page {
+    overflow: hidden;
+    background-color: #eee;
+}
+
+.page .header, .page .main-area, .page .footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.page .header .logo,
+.page .header .links,
+.page .main-area .content,
+.page .main-area .sidebar,.page .footer{
+    padding: 10px;
+    margin: 7px;
+    background-color: #ddd;
+    display: flex;
+}
+
+.page .header .logo {
+    flex-basis: 15%;
+    justify-content: center;
+    align-items: center;
+}
+
+.page .header .links {
+    margin: 10px;
+    padding: 0;
+    flex-grow: 1;
+    list-style: none;
+    background-color: #ddd;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.page .header .links li{
+    margin-left: 5px;
+    padding: 10px;
+}
+.page .header .links li:hover{
+    background-color: cornflowerblue;
+    cursor: pointer;
+}
+.page .main-area{
+    min-height: 300px;
+}
+.page .main-area .sidebar{
+   min-width: 23%;
+}
+.page .main-area .content{
+    flex-grow: 1;
+}
+
+
+
+/* End *****************  ${test}  ********************/
