@@ -8,7 +8,7 @@ parent for slide grid
 .parent {
     display: grid;
     grid-template-columns: auto 2fr;
-    font-family: arial;
+    font-family: arial, serif;
     text-transform: capitalize;
     font-weight: 400;
     font-size: 20px;
