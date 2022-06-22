@@ -147,3 +147,78 @@ h2 {
 }
 
 /* End *****************  ${three}  ********************/
+
+/* Start *****************  four  ********************/
+
+.four .grid{
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin: 10px auto;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(8,1fr);
+}
+
+.four .grid div{
+    background: #2196f3;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.four .grid .one{
+    grid-column: 1 / 9; /* span 8 */
+}
+.four .grid .two{
+    grid-column: 1 / 6; /* span 5 */
+}
+.four .grid .three{
+    grid-column: 6 / 9; /* span 3 */
+}
+.four .grid .four{
+    grid-column: 1 / 4; /* span 3 */
+}
+.four .grid .five{
+    grid-column: 4 / 9; /* span 5 */
+    grid-row: 3 / 6; /* span 3 */
+}
+.four .grid .six{
+    grid-column: 1 / 4; /* span 3 */
+}
+.four .grid .seven{
+    grid-column: 1 / 4; /* span 3 */
+}
+.four .grid .eight{
+    grid-column: 1 / 9; /* span 8 */
+}
+
+
+/* Ennnd *****************  four  ********************/
+
+/* Start *****************  five  ********************/
+
+.five .grid{
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 0 15px;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.five .grid div{
+    background: #e91e63;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Ennnd *****************  five  ********************/
