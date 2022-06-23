@@ -40,24 +40,25 @@ h2 {
 
 /* Start *****************  one  ********************/
 
-.one .grid{
+.one .grid {
     background-color: #ddd;
     padding: 20px;
     width: 800px;
     height: 400px;
     margin: 10px auto;
     display: grid;
-    grid-template-columns: repeat(3 , 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 50px auto;
-    gap:  15px;
+    gap: 15px;
     color: white;
 }
 
-.one .grid div{
-    counter-increment: grid-div ;
+.one .grid div {
+    counter-increment: grid-div;
     background-color: #607d8b;
 }
-.one .grid div:before{
+
+.one .grid div:before {
     content: 'Element ' counter(grid-div);
     display: flex;
     justify-content: center;
@@ -65,22 +66,21 @@ h2 {
     height: 100%;
 }
 
-/* End *****************  ${one}  ********************/
+/* End *****************  ${one}  ********************/ /*one*/
 
 /* Start *****************  two  ********************/
 
-.layout{
+.layout {
     width: 100%;
     height: 500px;
     display: grid;
     color: white;
-    grid-template-columns: repeat(12 , 1fr);
+    grid-template-columns: repeat(12, 1fr);
     grid-auto-rows: 50px 1fr 50px;
     grid-template-areas:
             'header header header header header header header header header header header header'
             'section section section section section section section section section aside aside aside'
-            'footer footer footer footer footer footer footer footer footer footer footer footer'
-    ;
+            'footer footer footer footer footer footer footer footer footer footer footer footer';
 }
 
 .layout > * {
@@ -89,37 +89,40 @@ h2 {
     padding: 10px;
 }
 
-.layout header{
-    background-color: #03a9f4 ;
+.layout header {
+    background-color: #03a9f4;
     grid-area: header;
 }
-.layout header:before{
+
+.layout header:before {
     content: 'header';
 }
 
-.layout section{
-    background-color:#ff5722 ;
+.layout section {
+    background-color: #ff5722;
     grid-area: section;
 }
-.layout section:before{
+
+.layout section:before {
     content: 'section';
 }
 
 
-.layout aside{
+.layout aside {
     background-color: #607d8b;
     grid-area: aside;
 }
 
-.layout aside:before{
+.layout aside:before {
     content: 'aside';
 }
 
-.layout footer{
-    background-color:#009688 ;
+.layout footer {
+    background-color: #009688;
     grid-area: footer;
 }
-.layout footer:before{
+
+.layout footer:before {
     content: 'footer';
 }
 
@@ -138,7 +141,8 @@ h2 {
     grid-template-columns: auto 1fr 1fr auto;
     grid-template-rows: 1fr auto;
 }
-.three .grid div{
+
+.three .grid div {
     background-color: #403f3f;
     color: white;
     display: flex;
@@ -150,7 +154,7 @@ h2 {
 
 /* Start *****************  four  ********************/
 
-.four .grid{
+.four .grid {
     background-color: #ddd;
     padding: 20px;
     width: 800px;
@@ -158,10 +162,10 @@ h2 {
     margin: 10px auto;
     display: grid;
     gap: 15px;
-    grid-template-columns: repeat(8,1fr);
+    grid-template-columns: repeat(8, 1fr);
 }
 
-.four .grid div{
+.four .grid div {
     background: #2196f3;
     color: white;
     justify-content: center;
@@ -169,29 +173,36 @@ h2 {
     display: flex;
 }
 
-.four .grid .one{
+.four .grid .one {
     grid-column: 1 / 9; /* span 8 */
 }
-.four .grid .two{
+
+.four .grid .two {
     grid-column: 1 / 6; /* span 5 */
 }
-.four .grid .three{
+
+.four .grid .three {
     grid-column: 6 / 9; /* span 3 */
 }
-.four .grid .four{
+
+.four .grid .four {
     grid-column: 1 / 4; /* span 3 */
 }
-.four .grid .five{
+
+.four .grid .five {
     grid-column: 4 / 9; /* span 5 */
     grid-row: 3 / 6; /* span 3 */
 }
-.four .grid .six{
+
+.four .grid .six {
     grid-column: 1 / 4; /* span 3 */
 }
-.four .grid .seven{
+
+.four .grid .seven {
     grid-column: 1 / 4; /* span 3 */
 }
-.four .grid .eight{
+
+.four .grid .eight {
     grid-column: 1 / 9; /* span 8 */
 }
 
@@ -200,20 +211,20 @@ h2 {
 
 /* Start *****************  five  ********************/
 
-.five .grid{
+.five .grid {
     background-color: #ddd;
     padding: 20px;
     width: 800px;
     height: 400px;
     margin: 10px auto;
     display: grid;
-    grid-template-columns: repeat(2 , 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 0 15px;
     justify-content: space-between;
     align-content: space-between;
 }
 
-.five .grid div{
+.five .grid div {
     background: #e91e63;
     display: flex;
     justify-content: center;
@@ -222,3 +233,72 @@ h2 {
 }
 
 /* Ennnd *****************  five  ********************/
+
+/* Start *****************  six  ********************/
+
+
+
+.six .page {
+    padding: 5px;
+    margin: 0;
+    background: #eee;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    justify-content: center;
+
+}
+.six .page div{
+    padding: 10px;
+    background: white;
+    border-bottom: 2px solid red;
+    position: relative;
+}
+
+.six .page .name{
+    margin-bottom: 5px;
+}
+.six .page .jop{
+    color: #a8a8a8;
+    display: block;
+    font-size: 0.9em;
+}
+.six .page .disc-title{
+    font-weight: bold;
+}
+
+.six .page div:before{
+    content: "''";
+    color: #bbaaaa;
+    position: absolute;
+    font-size: 54px;
+    bottom: -17px;
+    right: 12px;
+}
+
+.six .page .one{
+    grid-column: span 2;
+}
+.six .page .three{
+    grid-row: span 3;
+    background: #000000;
+    color: white;
+}
+.six .page .four{
+    grid-row: span 2;
+}
+.six .page .five{
+    grid-column: span 2;
+    background: #000000;
+    color: white;
+}
+.six .page .six{
+    grid-column: span 2;
+}
+
+.six .page .eight{
+    background: #000000;
+    color: white;
+}
+/* Ennnd *****************  six  ********************/
