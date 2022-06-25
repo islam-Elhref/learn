@@ -1,37 +1,45 @@
 
-.container{
-    width: 1400px;
-    margin: 0 auto;
+*{
+    box-sizing: border-box;
+    font-family: arial, serif;
+    margin: 0;
+    padding: 0;
 }
 
+
+
 .page {
-    padding: 5px;
-    margin: 0 auto;
-    background: #eee;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 10px;
+    width: 100%; /*true*/
+    height: 100%; /*true*/
+    padding: 30px; /*true*/
+    background: #eee; /*true*/
+    display: grid; /*true*/
+    grid-template-columns: repeat(4, auto); /*true*/
+    grid-template-rows: repeat(4, auto);
+    gap: 15px; /*true*/
     justify-content: center;
 
 }
 .page div{
-    padding: 10px;
-    background: white;
+    padding: 10px 28px 10px 20px; /*true*/
+    background: white; /*true*/
     border-bottom: 2px solid red;
-    position: relative;
+    position: relative; /*true*/
+
 }
 
 .page .name{
     margin-bottom: 5px;
 }
 .page .jop{
+    margin-bottom: 10px;
     color: #a8a8a8;
     display: block;
     font-size: 0.9em;
 }
 .page .disc-title{
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .page div:before{
@@ -39,8 +47,9 @@
     color: #bbaaaa;
     position: absolute;
     font-size: 54px;
-    bottom: -17px;
+    bottom: -26px;
     right: 12px;
+    transform: rotate(12deg);
 }
 
 .page .one{
@@ -48,7 +57,7 @@
 }
 .page .three{
     grid-row: span 3;
-    background: #000000;
+    background: #000000; /*true*/
     color: white;
 }
 .page .four{
@@ -56,14 +65,14 @@
 }
 .page .five{
     grid-column: span 2;
-    background: #000000;
+    background: #000000; /*true*/
     color: white;
 }
 .page .six{
     grid-column: span 2;
 }
 
-.six .page .eight{
-    background: #000000;
+.page .eight{
+    background: #000000; /*true*/
     color: white;
 }
