@@ -1,0 +1,69 @@
+
+.container{
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.page {
+    padding: 5px;
+    margin: 0 auto;
+    background: #eee;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    justify-content: center;
+
+}
+.page div{
+    padding: 10px;
+    background: white;
+    border-bottom: 2px solid red;
+    position: relative;
+}
+
+.page .name{
+    margin-bottom: 5px;
+}
+.page .jop{
+    color: #a8a8a8;
+    display: block;
+    font-size: 0.9em;
+}
+.page .disc-title{
+    font-weight: bold;
+}
+
+.page div:before{
+    content: "''";
+    color: #bbaaaa;
+    position: absolute;
+    font-size: 54px;
+    bottom: -17px;
+    right: 12px;
+}
+
+.page .one{
+    grid-column: span 2;
+}
+.page .three{
+    grid-row: span 3;
+    background: #000000;
+    color: white;
+}
+.page .four{
+    grid-row: span 2;
+}
+.page .five{
+    grid-column: span 2;
+    background: #000000;
+    color: white;
+}
+.page .six{
+    grid-column: span 2;
+}
+
+.six .page .eight{
+    background: #000000;
+    color: white;
+}
