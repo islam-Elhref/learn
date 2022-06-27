@@ -1,0 +1,304 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial , sans-serif ;
+    font-size: 1.5em;
+}
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.parent .assignment {
+    border-right: 4px dashed red;
+    order: -1;
+    width: 100%;
+    text-align: center;
+}
+
+.parent .assignment img {
+    width: 400px;
+}
+
+body > h1 {
+    text-align: center;
+}
+
+/*------------------     parent  -- -*/
+
+/*********************  test one  ************************/
+
+.one div {
+    width: 100px; /*true*/
+    height: 100px; /*true*/
+    margin: 20px auto; /*true*/
+    background: #eeeeee; /*true*/
+    border-radius: 50%; /*true*/
+    display: flex; /*true*/
+    justify-content: center; /*true*/
+    align-items: center; /*true*/
+    color: #ff5722; /*true*/
+    font-weight: bolder; /*true*/
+    box-shadow: 5px 0 0 0 #ff5722, -5px 0 0 0 #03a9f4; /*true*/
+    font-size: 20px;
+} /* finish */
+
+/*********************  test one  ************************/
+
+/*********************  test two  ************************/
+.parent >.two{
+    width: 600px; /*true*/
+    height: 300px; /*true*/
+    background: #eeeeee; /*true*/
+    margin: 20px auto; /*true*/
+    display: flex; /*true*/
+    padding: 10px; /*true*/
+
+    color: white;  /*true*/
+    flex-wrap: wrap; /*true*/
+    align-content: space-between; /*true*/
+    justify-content: space-between; /*true*/
+}
+
+.parent >.two div{
+    width: calc(95% / 3  ); /*true*/
+    padding: 10px;
+    display: flex; /*true*/
+    justify-content: center;/*true*/
+    align-items: center;/*true*/
+    background: #ff5722; /*true*/
+}
+
+/*********************  test two  ************************/
+
+/*********************  test three  ************************/
+
+.parent >.three{
+    width: 600px; /*true*/
+    height: 300px; /*true*/
+    margin: 20px auto; /*true*/
+    padding: 10px; /*true*/
+    display: flex; /*true*/
+    background: #eeeeee; /*true*/
+    color: white; /*true*/
+    flex-wrap: wrap; /*true*/
+    justify-content: space-between;
+}
+
+.parent >.three div {
+    width: calc(95% / 3 ); /*true*/
+    background: #607d8b; /*true*/
+    padding: 10px; /*true*/
+    display: flex;/*true*/
+    align-items: center; /*true*/
+    justify-content: center;/*true*/
+}
+
+.three .one{
+    order: 6;
+    align-self: flex-end;
+
+}
+
+.three .two{
+    order: 5;
+}
+
+.three .three{
+    order: 2;
+    align-self: flex-start;
+}
+
+.three .four{
+    order: 3;
+}
+
+.three .five{
+    order: 4;
+}
+.three .six{
+    order: 1;
+}
+
+/*********************  test three  ************************/
+
+/*********************  test four  ************************/
+.parent >.four{
+    width: 600px; /*true*/
+    height: 300px; /*true*/
+    margin: 20px auto; /*true*/
+    padding: 10px; /*true*/
+    display: flex; /*true*/
+    color: white; /*true*/
+    background: #eeeeee; /*true*/
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.parent >.four div{
+    background: #009688; /*true*/
+    padding: 10px; /*true*/
+    height: calc(95% / 3); /* = flex-basis: calc(100% / 3) */
+    flex-basis: calc(95% / 3);
+    display: flex; /*true*/
+    justify-content: center; /*true*/
+    align-items: center; /*true*/
+}
+
+.parent >.four .one{
+    align-self: end;
+}
+.parent >.four .two{
+    width: 50%;
+}
+.parent >.four .three{
+    align-self: end;
+}
+
+/*********************  test four  ************************/
+
+/*********************  test five  ************************/
+.parent >.five{
+    width: 600px;
+    height: 300px;
+    margin: 20px auto;
+    padding: 10px;
+    display: flex;
+    color: white;
+    background: #eeeeee;
+    justify-content: space-between;
+}
+
+.parent >.five div{
+    text-align: center;
+    background: #009688;
+    padding: 10px;
+    height: 50%;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parent >.five .one{
+    order: 2;
+    background: #ff9800;
+
+}
+.parent >.five .two{
+    order: 3;
+    align-self: end;
+    background: #8bc34a;
+
+}
+.parent >.five .three{
+    order: 4;
+    background: #795548;
+}
+.parent >.five .four{
+    order: 1;
+    align-self: end;
+    background: #673ab7;
+}
+
+/*********************  test five  ************************/
+/*********************  test six  ************************/
+
+:root{
+    --space: 40px;
+    --padding:10px;
+    --header:55px;
+    --footer:55px;
+    --copyright-width:50%;
+    --design-width:50%;
+    --background-page: #eeeeee;
+    --background-divs: #dddddd;
+}
+
+.page{
+    background: var(--background-page);
+    font-size: initial;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    justify-content: space-around;
+}
+
+/*header*/
+.page .header{
+    display: flex;
+    justify-content: space-around;
+    height: var(--header);
+}
+.page .header .logo{
+    background: var(--background-divs);
+    padding: var(--padding);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+}
+.page .header .links{
+    margin: 0;
+    list-style: none;
+    background: var(--background-divs);
+    padding: var(--padding);
+    width: calc(100% - 10% - var(--space));
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+}
+.page .header .links li{
+    display: inline-block;
+    padding: var(--padding);
+}
+/*header*/
+/*  main-area  */
+
+.main-area{
+    display: flex;
+    justify-content: space-around;
+    height: calc(100% - var(--footer) - var(--header) - var(--space) );
+}
+.main-area .content{
+    width: calc(100% - 25% - var(--space));
+    background: var(--background-divs);
+    padding: var(--padding);
+}
+.main-area .sidebar{
+    width: 25%;
+    background: var(--background-divs);
+    padding: var(--padding);
+}
+
+/*  main-area  */
+
+/*  footer  */
+
+.footer{
+    display: flex;
+    height: var(--footer);
+    background: var(--background-divs);
+    justify-content: space-between;
+    margin: 0 calc(var(--space) / 4) ;
+
+}
+.footer .copyright{
+    padding: var(--padding);
+    display: flex;
+    align-items: center;
+    width: calc(100% - var(--design-width) - var(--space));
+}
+.footer .design{
+    padding: var(--padding);
+    display: flex;
+    align-items: center;
+    width: var(--design-width);
+    justify-content: end;
+}
+/*  footer  */
+
+/*********************  test six  ************************/
