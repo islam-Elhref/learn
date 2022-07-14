@@ -1,0 +1,55 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.parentz {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    font-family: arial, serif;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+
+.parentz .slide {
+    display: inline-block;
+    order: -1;
+    border-right: 5px dotted red;
+    width: 100%;
+    text-align: center;
+}
+
+.parentz .slide img {
+    width: 200px;
+    margin: 20px auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+/*----------------------------------*/
+
+/*********Start************  test one  ******************بسم الله********/
+
+.one div.main.red{
+    color: red;
+    font-weight: bold;
+
+}
+
+.two .parent > .child:last-child{
+    color: red;
+    font-weight: bold;
+}
+
+.three .parent .baby:only-child{
+    color: red;
+    font-weight: bold;
+}
+
+
+
+/******** End  ************  test one  ******************الحمد لله********/

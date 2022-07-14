@@ -38,253 +38,94 @@ h2 {
 
 /*----------------------------------*/
 
-/* Start *****************  one  ********************/
-
-.one .grid {
-    background-color: #ddd;
-    padding: 20px;
-    width: 800px;
-    height: 400px;
-    margin: 10px auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 50px auto;
-    gap: 15px;
-    color: white;
-}
-
-.one .grid div {
-    counter-increment: grid-div;
-    background-color: #607d8b;
-}
-
-.one .grid div:before {
-    content: 'Element ' counter(grid-div);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-/* End *****************  ${one}  ********************/ /*one*/
-
-/* Start *****************  two  ********************/
-
-.layout {
-    width: 100%; /*true*/
-    height: 500px; /*true*/
-    display: grid; /*true*/
-    color: white; /*true*/
-    grid-template-columns: repeat(12, 1fr); /*true*/
-    grid-auto-rows: 50px 1fr 50px; /*true*/
-    grid-template-areas:
-            'header header header header header header header header header header header header'
-            'section section section section section section section section section aside aside aside'
-            'footer footer footer footer footer footer footer footer footer footer footer footer';
-}
-.layout > * {
-    padding: 10px; /*true*/
-}
-.layout header {
-    background-color: #03a9f4; /*true*/
-    grid-area: header;
-}
-.layout section {
-    background-color: #ff5722;
-    grid-area: section;
-}
-.layout aside {
-    background-color: #607d8b;
-    grid-area: aside;
-}
-.layout footer {
-    background-color: #009688;
-    grid-area: footer;
-}
-.layout header:before { /*true*/
-    content: 'header';
-}
-.layout section:before { /*true*/
-    content: 'section';
-}
-
-.layout aside:before { /*true*/
-    content: 'aside';
-}
-.layout footer:before { /*true*/
-    content: 'footer';
-}
-
-/* End *****************  ${two}  ********************/
-
-/* Start *****************  three  ********************/
-
-.three .grid {
-    background-color: #ddd; /*true*/
-    padding: 20px; /*true*/
-    width: 800px; /*true*/
-    height: 400px; /*true*/
+/*********************  one  ************************/
+.one div {
+    font-family: serif;
+    width: 300px; /*true*/
+    height: 200px; /*true*/
     margin: 10px auto; /*true*/
-    display: grid; /*true*/
-    gap: 15px;
-    grid-template-columns: auto 1fr 1fr auto;
-    grid-template-rows: 1fr auto;
-}
-
-.three .grid div {
-    background-color: #403f3f; /*true*/
-    color: white; /*true*/
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* End *****************  ${three}  ********************/
-
-/* Start *****************  four  ********************/
-
-.four .grid {
-    background-color: #ddd; /*true*/
-    padding: 20px; /*true*/
-    width: 800px; /*true*/
-    height: 400px; /*true*/
-    margin: 10px auto; /*true*/
-    display: grid; /*true*/
-    gap: 15px;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(6 , 1fr);
-}
-
-.four .grid div {
-    background: #2196f3; /*true*/
-    color: white; /*true*/
+    background: #eee; /*true*/
+    color: #03a9f4; /*true*/
+    display: flex; /*true*/
     justify-content: center; /*true*/
     align-items: center; /*true*/
-    display: flex; /*true*/
-}
-
-.four .grid .one {
-    grid-column: 1 / 9; /* span 8 */
-    grid-row: 6 / 6;
-}
-
-/*grid-area : start-row  / start column / end row / end column */
-.four .grid .two {
-    grid-area:  2 / 1 / 2 / 6  ; /* span 5 */
-}
-
-.four .grid .three {
-    grid-column: 6 / 9; /* span 3 */
-}
-
-.four .grid .four , .four .grid .six , .four .grid .seven {
-    grid-column: 1 / 4; /* span 3 */
-}
-
-.four .grid .five {
-    grid-column: 4 / 9; /* span 5 */
-    grid-row: 3 / 6; /* span 3 */
-}
-
-.four .grid .eight {
-    grid-column: 1 / 9; /* span 8 */
-    grid-row: 1 / 1;
-}
-
-
-/* Ennnd *****************  four  ********************/
-
-/* Start *****************  five  ********************/
-
-.five .grid {
-    background-color: #ddd;
-    padding: 20px;
-    width: 800px;
-    height: 400px;
-    margin: 10px auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0 15px;
-    justify-content: space-between;
-    align-content: space-between;
-}
-
-.five .grid div {
-    background: #e91e63;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-/* Ennnd *****************  five  ********************/
-
-/* Start *****************  six  ********************/
-
-
-
-.six .page {
-    padding: 5px;
-    margin: 0;
-    background: #eee;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 10px;
-    justify-content: center;
-
-}
-.six .page div{
-    padding: 10px;
-    background: white;
-    border-bottom: 2px solid red;
+    font-weight: bold; /*true*/
+    font-size: 2em; /*true*/
     position: relative;
 }
 
-.six .page .name{
-    margin-bottom: 5px;
-}
-.six .page .jop{
-    color: #a8a8a8;
-    display: block;
-    font-size: 0.9em;
-}
-.six .page .disc-title{
-    font-weight: bold;
-}
-
-.six .page div:before{
-    content: "''";
-    color: #bbaaaa;
+.one div:before{
+    content: '';
+    background: #03a9f4;
+    width: 300px;
+    height: 200px;
+    transform: rotate(-5deg) scale(1.03 , 1.03);
+    z-index: -1;
     position: absolute;
-    font-size: 54px;
-    bottom: -17px;
-    right: 12px;
+
+}
+.one div:after{
+    content: '';
+    background: #e91e63;
+    width: 300px;
+    height: 200px;
+    transform: rotate(5deg) scale(1.03 , 1.03);
+    z-index: -2;
+    position: absolute;
+
+}
+/*********************  one  ************************/
+
+:root{
+    --width-height: 200px; /*true*/
+    --border-width: 8px;
 }
 
-.six .page .one{
-    grid-column: span 2;
-}
-.six .page .three{
-    grid-row: span 3;
-    background: #000000;
-    color: white;
-}
-.six .page .four{
-    grid-row: span 2;
-}
-.six .page .five{
-    grid-column: span 2;
-    background: #000000;
-    color: white;
-}
-.six .page .six{
-    grid-column: span 2;
+.two{
+    border: 1px solid;
 }
 
-.six .page .eight{
-    background: #000000;
-    color: white;
+.two div{
+    width: var(--width-height); /*true*/
+    height: var(--width-height); /*true*/
+    background: #eee; /*true*/
+
+    position: relative; /*true*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+        /*4 row above == margin : 20px auto */
+
+    display: flex; /*true*/
+    justify-content: center;  /*true*/
+    align-items: center;  /*true*/
+
+    border-radius: 50%;  /*true*/
+    font-weight: bold;  /*true*/
+    font-family: Serif, Arial, cursive;  /*true*/
+    font-size: 1.4em; /*true*/
 }
-/* Ennnd *****************  six  ********************/
+.two div:before{
+    content: '';
+    width: var(--width-height);
+    height: var(--width-height);
+    position: absolute;
+    border-radius: 50%;
+    border: var(--border-width) solid #e91e63 ;
+    border-left-color: transparent;
+    transition: transform 0.5s ease-in-out;
+}
+.two div:after{
+    content: '';
+    width: calc(var(--width-height) +  var(--border-width) * 2 );
+    height:  calc(var(--width-height) +  var(--border-width) * 2 );
+    position: absolute;
+    border-radius: 50%;
+    border: var(--border-width) solid #03a9f4 ;
+    border-right-color: transparent;
+    transition: transform 0.5s 0.5s ease-in-out;
+}
+
+.two div:hover:before , .two div:hover:after{
+    transform: rotate(360deg);
+}

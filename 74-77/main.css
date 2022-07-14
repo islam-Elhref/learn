@@ -1,0 +1,347 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    font-family: arial, serif;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+
+.parent .slide {
+    display: inline-block;
+    order: -1;
+    border-right: 5px dotted red;
+    width: 100%;
+    text-align: center;
+}
+
+.parent .slide img {
+    width: 400px;
+    margin: 20px auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+/*----------------------------------*/
+
+/*********Start************  test one  ******************بسم الله********/
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes spin-child {
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.one > div {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin: 20px auto;
+    border: 5px solid red;
+    border-radius: 50%;
+    border-top-color: transparent;
+
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+.one > div:hover {
+    animation-play-state: paused;
+}
+
+.one > div:before {
+    content: '';
+    width: calc(100% + 15px);
+    height: calc(100% + 15px);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid blue;
+    border-radius: 50%;
+    border-bottom-color: transparent;
+
+}
+
+.one > div:after {
+    content: '';
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid orange;
+    border-radius: 50%;
+    border-left-color: transparent;
+
+}
+
+/******** End  ************  test one  ******************الحمد لله********/
+
+/*********Start************  test two  ******************بسم الله********/
+
+.two div {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin: 20px auto;
+}
+
+.two .spin-parent {
+
+
+    border: 5px solid blue;
+    border-radius: 50%;
+    border-bottom-color: transparent;
+
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+
+.two div:hover .spin-parent, .two div:hover:before, .two div:hover:after {
+    animation-play-state: running;
+}
+
+.two > div:before {
+    content: '';
+    width: calc(100% + 15px);
+    height: calc(100% + 15px);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid orange;
+    border-radius: 50%;
+    border-bottom-color: transparent;
+
+    animation-name: spin-child;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+    animation-direction: reverse;
+}
+
+.two > div:after {
+    content: '';
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid black;
+    border-radius: 50%;
+    border-bottom-color: transparent;
+
+    animation-name: spin-child;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+
+/******** End  ************  test two  ******************الحمد لله********/
+
+/*********Start************  test three  ******************بسم الله********/
+
+.three span {
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    border: 5px solid #000;
+    border-bottom-color: transparent;
+    background: #ccc;
+    border-radius: 50%;
+    animation: spin 1s linear infinite reverse;
+}
+
+/******** End  ************  test three  ******************الحمد لله********/
+
+/*********Start************  test four  ******************بسم الله********/
+
+:root{
+    --parent-width:420px;
+    --parent-heigth:350px;
+    --marign:20px;
+    --width-div: calc( (var(--parent-width) - var(--marign)) / 2  );
+
+    --cells-width: calc( var(--width-div) / 4 );
+    --cells-height: calc( var(--parent-heigth) / 7 );
+
+    --box-width: calc( var(--cells-width) - 10px );
+    --box-height: calc( var(--cells-height) - 10px )
+}
+
+.four-parent{
+    display: flex;
+    width: var(--parent-width);
+    height: var(--parent-heigth);
+    background: #eee;
+    justify-content: space-between;
+}
+
+.four-parent .car-e , .four-parent .car-l{
+    width: var(--width-div) ;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4 , var(--cells-width) );
+    grid-template-rows: repeat(7 , var(--cells-height) );
+    position: relative;
+}
+
+.four-parent .car-e div , .four-parent .car-l div {
+    background: black;
+}
+.four-parent .car-e .one{
+    grid-column: 1 / 1;
+    grid-row: 1 / 8;
+}
+.four-parent .car-e .two {
+    grid-column: 2 / 5;
+    grid-row: 1 / 1;
+}
+.four-parent .car-e .three {
+    grid-column: 2 / 5;
+    grid-row: 4 / 4;
+}
+.four-parent .car-e .four {
+    grid-column: 2 / 5;
+    grid-row: 7 / 7;
+}
+
+.four-parent .car-l .one{
+    grid-column: 1 / 1;
+    grid-row:1/8 ;
+}
+.four-parent .car-l .two{
+    grid-column: 2 / 5;
+    grid-row: 7 / 7;
+}
+
+.four-parent .car-e:before , .four-parent .car-l:before{
+    content: '';
+    width: var(--box-width) ;
+    height: var(--box-height) ;
+    position: absolute;
+    background: orange;
+}
+
+.four-parent .car-e:before{
+    right: 5px;
+    top: 5px;
+    animation: car-e 10s ease-in-out infinite;
+}
+.four-parent .car-l:before{
+    right: 5px;
+    bottom: 5px;
+    opacity: 0;
+    animation: car-l 10s ease-in-out -5s infinite;
+}
+
+@keyframes car-l {
+    0%{
+        right: 5px;
+        bottom: 5px;
+        opacity: 0;
+    }
+    50%{
+        right: 5px;
+        bottom: 5px;
+        opacity: 0;
+    }
+    55%{
+        right: 5px;
+        bottom: 5px;
+        opacity: 1;
+    }
+    70%{
+        right: calc( var(--width-div) - var(--box-width)  - 5px );
+        bottom: 5px;
+        opacity: 1;
+    }
+    90%{
+        right: calc( var(--width-div) - var(--box-width)  - 5px );
+        bottom: calc( var(--parent-heigth) - var(--box-height) - 5px );
+        opacity: 1;
+    }
+    100%{
+        right: calc( var(--width-div) - var(--box-width)  - 5px );
+        bottom: calc( var(--parent-heigth) - var(--box-height) - 5px );
+        opacity: 0;
+    }
+}
+
+@keyframes car-e {
+    0%{
+        right: 5px;
+        top: 5px;
+    }
+    50%{
+        right: 5px;
+        top: 5px;
+    }
+    55%{
+        right: calc( var(--width-div) - var(--box-width) - 5px  );
+        top: 5px;
+    }
+    60%{
+        right: calc( var(--width-div) - var(--box-width) - 5px  );
+        top: calc( var(--cells-width) * 3 + 5px);
+    }
+    65%{
+        right: 5px;
+        top: calc( var(--cells-width) * 3 + 5px);
+    }
+    70%{
+        right: calc( var(--width-div) - var(--box-width) - 5px  );
+        top: calc( var(--cells-width) * 3 + 5px);
+    }
+    75%{
+        right: calc( var(--width-div) - var(--box-width) - 5px  );
+        top: calc( var(--parent-heigth) - var(--box-height) - 5px );
+    }
+    80%{
+        right: 5px;
+        top: calc( var(--parent-heigth) - var(--box-height) - 5px );
+    }
+    85%{
+        right: calc( var(--width-div) - var(--box-width) - 5px  );
+        top: calc( var(--parent-heigth) - var(--box-height) - 5px );
+    }
+    95%{
+        right: calc( var(--width-div) - var(--box-width) - 5px  );
+        top: 5px;
+    }
+    100%{
+        right: 5px;
+        top: 5px;
+    }
+}
+
+/******** End  ************  test four  ******************الحمد لله********/
